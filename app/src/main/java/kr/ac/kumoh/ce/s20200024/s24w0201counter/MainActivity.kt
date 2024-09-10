@@ -9,7 +9,7 @@ import kr.ac.kumoh.ce.s20200024.s24w0201counter.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
     private lateinit var main: ActivityMainBinding
-    private var count = 0
+    private var count: Int = 0
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -18,7 +18,8 @@ class MainActivity : AppCompatActivity() {
 //        setContentView(R.layout.activity_main)
         setContentView(main.root)
         main.btnAdd.setOnClickListener {
-            main.txtCount.text = "눌렸습니다!"
+            count += 1
+            main.txtCount.text = count.toString()
         }
     }
 }
