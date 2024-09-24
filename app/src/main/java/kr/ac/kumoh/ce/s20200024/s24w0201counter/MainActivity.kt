@@ -21,5 +21,19 @@ class MainActivity : AppCompatActivity() {
             count += 1
             main.txtCount.text = count.toString()
         }
+
+        main.btnSub.setOnClickListener {
+            if (count > 0) {
+                count -= 1
+                main.txtCount.text = count.toString()
+            }
+        }
+
+        main.btnReset.setOnClickListener {
+            if (count > 0) {
+                count = 0
+                main.txtCount.text = count.toString()
+            }
+        }
     }
 }
