@@ -16,6 +16,7 @@ class MainActivity : AppCompatActivity() {
 
         main = ActivityMainBinding.inflate(layoutInflater)
 //        setContentView(R.layout.activity_main)
+
         setContentView(main.root)
         main.btnAdd.setOnClickListener {
             count += 1
